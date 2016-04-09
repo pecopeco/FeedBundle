@@ -67,6 +67,7 @@ class RssFormatter extends Formatter implements FormatterInterface
 
         $root = $this->dom->createElement('rss');
         $root->setAttribute('version', '2.0');
+        $root->setAttribute('xmlns:media', 'http://search.yahoo.com/mrss/');
         $root = $this->dom->appendChild($root);
 
         $channel = $this->dom->createElement('channel');
