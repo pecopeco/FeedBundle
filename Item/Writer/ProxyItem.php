@@ -65,6 +65,16 @@ class ProxyItem implements ItemInterface
     }
 
     /**
+     * Returns class item
+     *
+     * @return RoutedItemInterface
+     */
+    public function getItem()
+    {
+        return $this->item;
+    }
+
+    /**
      * This method returns feed item title.
      *
      * @return string

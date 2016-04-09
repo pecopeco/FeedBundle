@@ -325,8 +325,8 @@ class Formatter
     {
         foreach ($field->getAttributes() as $key => $value) {
             if ($item) {
-                $key = method_exists($item, $key) ? call_user_func([$item, $key]) : $key;
-                $value = method_exists($item, $value) ? call_user_func([$item, $value]) : $value;
+                $key = method_exists($item->getItem(), $key) ? call_user_func([$item, $key]) : $key;
+                $value = method_exists($item->getItem(), $value) ? call_user_func([$item, $value]) : $value;
             }
 
             $element->setAttribute($key, $value);
